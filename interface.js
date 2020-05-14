@@ -10,21 +10,21 @@ $(document).ready(function() {
 
     $('#up').click(function() {
       thermostat.up()
-      $('#Temperature').text(thermostat.getCurrentTemperature());
-      $('#Energy_Usage').text(thermostat.energyUsage());
+      $('#temperature').text(thermostat.getCurrentTemperature());
+      $('#energy_usage').text(thermostat.energyUsage());
     });
 
     $('#down').click(function() {
       thermostat.down()
-      $('#Temperature').text(thermostat.getCurrentTemperature());
-      $('#Energy_Usage').text(thermostat.energyUsage());
+      $('#temperature').text(thermostat.getCurrentTemperature());
+      $('#energy_usage').text(thermostat.energyUsage());
     });
 
 ///////
   $('#powersaving-on').click(function() {
     thermostat.switchPowerSavingModeOn();
     console.log(thermostat.powerSavingMode);
-    $('#Power_Mode').text('On');
+    $('#power_mode').text('On');
   });
 
 /////////
@@ -32,15 +32,15 @@ $(document).ready(function() {
   $('#powersaving-off').click(function() {
     thermostat.switchPowerSavingModeOff();
     console.log(thermostat.powerSavingMode);
-    $('#Power_Mode').text('Off');
+    $('#power_mode').text('Off');
   });
 
 ////////////
 
   $('#reset').click(function() {
     thermostat.resetTemperature()
-    $('#Temperature').text(thermostat.getCurrentTemperature());
-    $('#Energy_Usage').text(thermostat.energyUsage());
+    $('#temperature').text(thermostat.getCurrentTemperature());
+    $('#energy_usage').text(thermostat.energyUsage());
   });
 
 //////
