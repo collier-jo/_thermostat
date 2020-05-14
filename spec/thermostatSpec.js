@@ -78,13 +78,13 @@ describe('Thermostat', function() {
         for (var i = 0; i < 3; i++) {
           thermostat.down();
         };
-        expect(thermostat.energyUsage()).toEqual('Low-Usage');
+        expect(thermostat.energyUsage()).toEqual('Low');
       });
     });
 
     describe('When the temperature is between 18 and 25 degrees', function() {
       it('Displays medium-usage', function() {
-        expect(thermostat.energyUsage()).toEqual('Medium-Usage');
+        expect(thermostat.energyUsage()).toEqual('Medium');
       });
     });
 
@@ -94,7 +94,7 @@ describe('Thermostat', function() {
         for (var i = 0; i < 6; i++) {
           thermostat.up();
         };
-        expect(thermostat.energyUsage()).toEqual('High-Usage');
+        expect(thermostat.energyUsage()).toEqual('High');
       });
     });
   });

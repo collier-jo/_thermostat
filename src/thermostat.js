@@ -59,11 +59,11 @@ class Thermostat{
 
   energyUsage() {
     if (this.temperature < this.MEDIUM_ENERGY_USAGE_LIMIT) {
-      return 'Low-Usage';
+      return 'Low';
     };
     if (this.temperature >= this.MEDIUM_ENERGY_USAGE_LIMIT && this.temperature <= this.MAX_LIMIT_PSM_ON) {
-      return 'Medium-Usage';
+      return 'Medium';
     };
-    return 'High-Usage';
+    return 'High';
   };
 };
